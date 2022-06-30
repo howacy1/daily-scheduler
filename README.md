@@ -1,7 +1,7 @@
 # Daily Scheduler
 
 ## Purpose
-A website that you can save events/notes to help you manage time more efficently.
+A website that you can plan out your work day by the hour to help manage time.
 
 ## Built With
 * HTML
