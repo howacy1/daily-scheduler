@@ -1,14 +1,19 @@
+// variable for displaying today's day and date
 var todayDate = moment().format('dddd, MMM Do YYYY');
 $("#currentDay").html(todayDate);
 
+
 $(document).ready(function () {
+
+    // function that when saveBtn is clicked it grabs the time and text and saves it to local storage
     $(".saveBtn").on("click", function () {
         var text = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
 
         localStorage.setItem(time, text);
     })
-   
+    
+    // function for adding background styling on time slots depending on time of day(past, present, future)
     function timeTracker() {
         var timeNow = moment().hour();
 
@@ -34,6 +39,7 @@ $(document).ready(function () {
         })
     }
 
+    // gets item from local storage 
     $("#hour8 .description").val(localStorage.getItem("hour8"));
     $("#hour9 .description").val(localStorage.getItem("hour9"));
     $("#hour10 .description").val(localStorage.getItem("hour10"));
